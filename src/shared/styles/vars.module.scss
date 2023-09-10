@@ -1,0 +1,58 @@
+//backgrounds
+$bgDarkGray: #323B4C;
+$bgDarkGrayTransparent: rgba(50, 59, 76, 0.8);
+
+//z-indexes
+$zIndexAside: 2;
+$zIndexHeaderMobile: 3;
+
+//sizes
+$headerHeight: 80px;
+$headerHeightMobile: 60px;
+
+$footerHeight: 40px;
+
+//font weight
+$fwThin: 400;
+$fwDefault: 500;
+$fwBold: 700;
+
+//colors
+$gray: #363D4E;
+$lightGray: #6B6B6B;
+$lineGray: #404545;
+$light: #FFFFFF;
+
+//indents
+$indentRootPercentage: 14%;
+
+$indentDefaultXl: 48px;
+$indentDefaultL: 32px;
+$indentDefaultMd: 24px;
+$indentDefaultSm: 12px;
+$indentLow: 6px;
+
+//border radius
+$brDefault: 6px;
+
+//fontSizes
+$fsESmall: 12px;
+$fsSmall: 14px;
+$fsTextDefault: 16px;
+$fsTextMd: 18px;
+$fsTextL: 20px;
+$fsTextXL: 24px;
+$fsTextXXL: 32px;
+$fsTextEXL: 48px;
+
+//dimensions
+$ipadLg: 1000px;
+$ipadSm: 700px;
+$phones: 500px;
+
+:export {
+  gray: #{$gray};
+  lightGray: #{$lightGray};
+  lineGray: #{$lineGray};
+  light: #{$light};
+}

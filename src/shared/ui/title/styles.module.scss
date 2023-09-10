@@ -1,0 +1,27 @@
+@import "src/shared/styles/vars.module.scss";
+
+.title {
+  &H1 {
+    font-size: $fsTextEXL;
+  }
+
+  &H2 {
+    font-size: $fsTextXXL;
+  }
+
+  &H3 {
+    font-size: $fsTextXL;
+  }
+
+  &H4 {
+    font-size: $fsTextL;
+  }
+
+  &H5 {
+    font-size: $fsTextMd;
+  }
+
+  &H6 {
+    font-size: $fsTextDefault;
+  }
+}

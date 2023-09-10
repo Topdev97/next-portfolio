@@ -1,0 +1,53 @@
+{
+    "header": {
+        "home": "Me",
+        "projects": "Projects"
+    },
+    "footer": {
+        "copyright": "All rights reserved copyright ©"
+    },
+    "home": {
+        "name": "Nikita Averochkin",
+        "contacts": "Contacts",
+
+        "tel": "Phone",
+        "mail": "Email",
+        "address": "Address",
+        "addressLocation": "Voronezh, Russia",
+        "linkedIn": "Linkedin profile",
+        "skills": "Skills",
+        "education": "Education",
+        "institution": "Voronezh State University",
+        "institutionDirection": "Bachelor of Fundamental informatics and information technologies",
+        "languages": "Languages",
+        "russian": "Russian",
+        "english": "English",
+
+        "aboutMe": "I have been developing SPA/web resources for 4+ years. In my projects I use modern technologies: Typescript, React, Vue, Svetle. I am well versed in design, in adaptive cross-browser layout, ES6+ syntax. I am constantly working on the architecture and business logic of web applications, writing tests, and also working with external APIs. I permanently expand my horizons in development, so I have experience writing fullstack projects, with a top-level microservice architecture on the back (stack: NodeJs, Express, Mongo, RabbitMq) using Docker, Docker-compose and cloud storages. My main skill is to quickly dive into any new project and immediately make a tangible contribution to it. The same is true when I learn new technologies. My experience allows me to do it quickly. I also know how to work in a team and find a common language!",
+
+        "jobTitleIt1": "JS-developer",
+        "jobTitleShared": "Frontend developer",
+        "workingProcess": "Working process",
+        "experience": "Experience",
+
+        "it1": "IT1",
+        "locationIt1": "Moscow, Russia (Remote)",
+        "yearsIt1": "June 2023 — present",
+        "descriptionIt1": "Development of a corporate application portal for HP Service Manager for Gazprombank of Russia. I was involved in supporting existing functionality - refactoring existing code, fixing various defects, as well as writing new code and business logic in Javascript ES5 specification and RAD language. Used SOAP API to write new queries to retrieve data in XML and also refined existing queries.",
+
+        "calendaria": "Calendaria",
+        "locationCalendaria": "Almaty, Kazakhstan (Remote)",
+        "yearsCalendaria": "November 2022 — May 2023",
+        "descriptionCalendaria": "I was working on one project - developing a web IAM application from scratch. I set up the modular frontend architecture of this application in React with a custom configuration (webpack, plugins, babel). Participated in project analytics and wrote business logic based on the specifications, using the React+Typescript combination. Interacted with the design team - laid out and styled the application using figma, and also created reusable UI components based on the Ant design library. I also interacted with the backend development team - received data on Rest Api, exchanged thoughts on the implementation of various features.",
+
+        "tecom": "Теком",
+        "locationTecom": "Nizhny Novgorod, Russia (Remote)",
+        "yearsTecom": "February 2022 — November 2022",
+        "descriptionTecom": "Worked on various projects: Library of UI components. A library of ready-made utilities with its own store, with various actions and selectors. 3 different built-in widgets - charts, pdf reports, graphs (was written from scratch). And I also developed main project - remote device monitoring application. I was involved in supporting existing functionality - fixing bugs and refactoring code, as well as writing new code and business logic.For each project I developed various functional React components. For the UI library these were rewritten components from material-UI, for widgets - their own isolated modules. Covered unit projects with tests using jest, as well as e2e tests using playwright.",
+
+        "julius": "Julius",
+        "locationJulius": "London, United Kingdom (Remote)",
+        "yearsJulius": "October 2021 — February 2022",
+        "descriptionJulius": "Developed an interface for a web application with neural networks on the server side. I was preparing it for release into production. Part-time work in a small team of 7 people. I was involved in rewriting the properties of Antd components in scss, and moved reused property values into scss variables. I supplemented and also completely redesigned the layout of ready-made components. Created new components (tables, highcharts dashboard). I wrote new business logic using the React+Typescript combination. To receive data from the server I used React Relay and the graphql language. Interacted with the project lead for frontend development. Implemented tasks based on the requirements he set. I exchanged thoughts with him about the implementation of various features. I used the graphql documentation server, and also discussed with the backend developer the format and the data itself transferred to queries."
+    }
+}

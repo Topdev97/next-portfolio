@@ -1,0 +1,10 @@
+@import "src/shared/styles/vars.module.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and ((max-width: $ipadSm) or (max-height: $ipadSm)) {
+    flex-direction: column;
+  }
+}

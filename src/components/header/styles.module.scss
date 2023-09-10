@@ -1,0 +1,64 @@
+@import "src/shared/styles/vars.module.scss";
+
+.header {
+  height: $headerHeight;
+  padding: 0 $indentRootPercentage;
+  background: $bgDarkGray;
+
+  top: 0;
+  width: 100%;
+  position: fixed;
+
+  @media screen and (max-width: $ipadLg) {
+    padding: 0 6%;
+  }
+
+  @media screen and ((max-width: $ipadSm) or (max-height: $ipadSm)) {
+    padding: 0 $indentDefaultMd;
+  }
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    z-index: $zIndexHeaderMobile;
+    height: $headerHeightMobile;
+    padding: 0 $indentDefaultSm;
+  }
+}
+
+.nav {
+  height: 100%;
+}
+
+.linedNav {
+  @media screen and ((max-width: $ipadSm) or (max-height: $ipadSm)) {
+    border-bottom: 2px solid $light;
+  }
+}
+
+.ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: $indentDefaultXl;
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    gap: $indentDefaultMd;
+  }
+}
+
+.link {
+  color: $light;
+  font-size: $fsTextL;
+  cursor: pointer;
+
+  @media screen and ((max-width: $ipadSm) or (max-height: $ipadSm)) {
+    font-size: $fsTextMd;
+  }
+}
+
+.line {
+  height: 48px !important;
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    height: 32px !important;
+  }
+}

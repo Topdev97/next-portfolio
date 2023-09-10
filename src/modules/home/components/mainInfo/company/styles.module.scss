@@ -1,0 +1,64 @@
+@import "src/shared/styles/vars.module.scss";
+
+.text {
+  color: $gray;
+  font-size: $fsTextL;
+
+  @media screen and (max-width: $ipadLg) {
+    font-size: $fsTextDefault;
+  }
+}
+
+.lightText {
+  color: $lightGray;
+  font-size: $fsTextL;
+
+  @media screen and (max-width: $ipadLg) {
+    font-size: $fsTextDefault;
+  }
+}
+
+.title {
+  font-weight: $fwBold;
+  font-size: $fsTextXL;
+
+  margin-bottom: $indentDefaultSm;
+  margin-top: $indentDefaultMd;
+
+  @media screen and (max-width: $ipadLg) {
+    font-size: $fsTextL;
+  }
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    margin-bottom: $indentLow;
+    margin-top: $indentDefaultSm;
+  }
+}
+
+.aboutCompany {
+  margin-bottom: $indentLow;
+  display: flex;
+  align-items: center;
+  column-gap: $indentDefaultSm;
+  row-gap: $indentLow;
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    flex-wrap: wrap;
+  }
+}
+
+.companyName {
+  font-weight: $fwBold;
+}
+
+.description {
+  margin-bottom: $indentLow;
+}
+
+.skills {
+  margin-bottom: $indentLow;
+}
+
+.externalTitle {
+  text-decoration: underline;
+}
