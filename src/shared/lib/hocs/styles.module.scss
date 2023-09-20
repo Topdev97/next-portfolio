@@ -1,0 +1,33 @@
+@import "src/shared/styles/vars.module.scss";
+
+.container {
+  z-index: $zIndexModal;
+  backdrop-filter: blur(26px);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  padding: $indentDefaultXl;
+
+  display: flex;
+  justify-content: center;
+
+  @media screen and ((max-width: $ipadSm) or (max-height: $ipadSm)) {
+    padding: $indentDefaultXl $indentDefaultL;
+  }
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    padding: $indentDefaultXl $indentDefaultSm;
+  }
+}
+
+.closeImg {
+  position: absolute;
+  top: $indentDefaultSm;
+  right: $indentDefaultSm;
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+}

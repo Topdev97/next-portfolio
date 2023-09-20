@@ -10,20 +10,22 @@ import usFlag from "@/shared/assets/svg/usFlag.svg";
 import styles from "./styles.module.scss";
 
 interface ILanguagePicker {
-    isRuLocation: boolean;
+    pathname: string;
+    locationCountry: typeof RU | typeof EN;
 }
-const LanguagePicker: FC<ILanguagePicker> = ({ isRuLocation }) => {
+const LanguagePicker: FC<ILanguagePicker> = ({ pathname, locationCountry }) => {
+    const isRuLocation = locationCountry === RU;
+    const targetHref = pathname.replace("/" + RU, "").replace("/" + EN, "");
+
     return (
         <div className={styles.container}>
-            {isRuLocation ? (
-                <Link href={"/"} locale={EN}>
-                    <Image className={styles.img} src={usFlag} alt={EN} />
-                </Link>
-            ) : (
-                <Link href={"/"} locale={RU}>
-                    <Image className={styles.img} src={ruFlag} alt={RU} />
-                </Link>
-            )}
+            <Link href={targetHref || "/"} locale={isRuLocation ? EN : RU}>
+                <Image
+                    className={styles.img}
+                    src={isRuLocation ? ruFlag : usFlag}
+                    alt={locationCountry}
+                />
+            </Link>
         </div>
     );
 };

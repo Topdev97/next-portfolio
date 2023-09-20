@@ -1,0 +1,50 @@
+@import "src/shared/styles/vars.module.scss";
+
+$containerWidth: 300px;
+
+.container {
+  width: 300px;
+  padding: $indentDefaultSm;
+  background: $bgDarkGray;
+  border-radius: $brDefault;
+  display: flex;
+  gap: $indentDefaultSm;
+  flex-direction: column;
+}
+
+.text {
+  color: $light
+}
+
+.desc {
+  color: $light;
+  opacity: 0.8;
+  font-size: $fsTextMd;
+}
+
+.title {
+  font-weight: $fwBold;
+}
+
+.stack {
+  font-size: $fsTextL;
+}
+
+.gitImg {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.projImg {
+  border-radius: $brDefault;
+  width: $containerWidth - $indentDefaultSm * 2;
+}
+
+.btnsSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $indentDefaultSm;
+}

@@ -1,0 +1,64 @@
+@import "src/shared/styles/vars.module.scss";
+
+$containerWidth: 700px;
+
+.container {
+  max-width: 700px;
+  border-radius: $brDefault;
+  width: 100%;
+  height: fit-content;
+  background: $bgDarkGray;
+  padding: $indentDefaultMd;
+  display: flex;
+  flex-direction: column;
+  gap: $indentDefaultMd;
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    gap: $indentDefaultSm;
+    padding: $indentDefaultSm;
+  }
+}
+
+.projImg {
+  width: $containerWidth - $indentDefaultMd * 2;
+  border-radius: $brDefault;
+  box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.1);
+}
+
+.bold {
+  font-weight: $fwBold;
+}
+
+.title {
+  color: $light;
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    font-size: $fsTextXL;
+  }
+}
+
+.text {
+  color: $light;
+  font-size: $fsTextL;
+}
+
+.desc {
+  line-height: $fsTextMd * 1.4;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: $indentLow
+}
+
+.projectLink {
+  display: flex;
+  align-items: center;
+  gap: $indentDefaultSm
+}
+
+.gitImg {
+  width: 36px;
+  height: 36px;
+}

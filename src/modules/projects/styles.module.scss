@@ -1,0 +1,13 @@
+@import "src/shared/styles/vars.module.scss";
+
+.container {
+  width: 100%;
+  height: calc(100vh - $headerHeight - $footerHeight);
+  margin-top: $headerHeight;
+  z-index: $zIndexContent;
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    margin-top: $headerHeightMobile;
+    height: calc(100vh - $headerHeightMobile - $footerHeightMobile);
+  }
+}

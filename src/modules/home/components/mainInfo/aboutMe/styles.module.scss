@@ -1,0 +1,49 @@
+@import "src/shared/styles/vars.module.scss";
+
+.text {
+  color: $gray;
+}
+
+.nameTitle {
+  font-weight: $fwBold;
+  letter-spacing: 6px;
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    font-size: $fsTextXXL;
+  }
+}
+
+.jobTitle {
+  letter-spacing: 2px;
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    font-size: $fsTextXL;
+  }
+}
+
+.jobDesc {
+  margin: $indentDefaultMd 0;
+  color: $lightGray;
+  line-height: $fsTextMd * 1.4;
+  font-size: $fsTextL;
+
+  @media screen and (max-width: $ipadLg) {
+    font-size: $fsTextDefault;
+  }
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    margin: $indentDefaultSm 0;
+  }
+}
+
+.experience {
+  font-weight: $fwBold;
+
+  @media screen and ((max-width: $phones) or (max-height: $phones)) {
+    font-size: $fsTextXL
+  }
+}
+
+.line {
+  margin: $indentDefaultSm 0;
+}

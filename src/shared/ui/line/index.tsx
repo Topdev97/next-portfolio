@@ -1,9 +1,13 @@
-import lineAligns from "@/shared/ui/line/lineAligns";
 import { FC, HTMLAttributes } from "react";
-import variables from "@/shared/styles/vars.module.scss";
+import cssVars from "@/shared/styles/vars.module.scss";
 import cx from "classnames";
 
 import styles from "./styles.module.scss";
+
+export enum lineAligns {
+    vertical = "vertical",
+    horizontal = "horizontal"
+}
 
 interface ILine {
     align?: lineAligns;
@@ -16,7 +20,7 @@ const Line: FC<ILine & HTMLAttributes<HTMLDivElement>> = ({
     align = lineAligns.horizontal,
     size = "100%",
     thickness = "1px",
-    color = variables.light,
+    color = cssVars.light,
     ...basicProps
 }) => {
     const { className, style, ...restProps } = basicProps;

@@ -1,10 +1,14 @@
+"use client";
+
 import { FC } from "react";
 import Image from "next/image";
-import Title from "@/shared/ui/title";
+import { useTranslations } from "next-intl";
+import Title, { titleTypes } from "@/shared/ui/title";
 import cx from "classnames";
-import titleTypes from "@/shared/ui/title/titleTypes";
-import Line from "@/shared/ui/line";
-import lineAligns from "@/shared/ui/line/lineAligns";
+import Line, { lineAligns } from "@/shared/ui/line";
+
+import { motion } from "framer-motion";
+import { smoothAppearing } from "@/shared/constants/animationProps";
 
 import styles from "./styles.module.scss";
 import squareImg from "@/shared/assets/svg/square.svg";
@@ -12,16 +16,17 @@ import squareImg from "@/shared/assets/svg/square.svg";
 interface IBlockOfInfo {
     infoTitle: string;
     info: Array<{ title: string; description: string; year?: string; link?: string } | string>;
-    translation: any;
     withDots?: boolean;
 }
-const BlockOfInfo: FC<IBlockOfInfo> = ({ infoTitle, info, translation, withDots }) => {
+const BlockOfInfo: FC<IBlockOfInfo> = ({ infoTitle, info, withDots }) => {
+    const t = useTranslations("home");
+
     const infoElement = info.map((infoEl) => {
         if (typeof infoEl !== "string") {
             const { year, title, description, link } = infoEl;
 
-            const isPhoneTitle = title.includes(translation("tel"));
-            const isMailTitle = title.includes(translation("mail"));
+            const isPhoneTitle = title.includes(t("tel"));
+            const isMailTitle = title.includes(t("mail"));
 
             const isRegularTitle = !isPhoneTitle && !isMailTitle;
 
@@ -72,7 +77,7 @@ const BlockOfInfo: FC<IBlockOfInfo> = ({ infoTitle, info, translation, withDots 
     });
 
     return (
-        <div className={styles.container}>
+        <motion.div {...smoothAppearing} className={styles.container}>
             <Title
                 className={cx(styles.title, styles.titleH3)}
                 text={infoTitle}
@@ -80,7 +85,7 @@ const BlockOfInfo: FC<IBlockOfInfo> = ({ infoTitle, info, translation, withDots 
             />
             <Line thickness={"2px"} className={styles.line} align={lineAligns.horizontal} />
             {infoElement}
-        </div>
+        </motion.div>
     );
 };
 export default BlockOfInfo;

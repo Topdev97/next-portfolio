@@ -3,14 +3,17 @@ $bgDarkGray: #323B4C;
 $bgDarkGrayTransparent: rgba(50, 59, 76, 0.8);
 
 //z-indexes
+$zIndexContent: 2;
 $zIndexAside: 2;
 $zIndexHeaderMobile: 3;
+$zIndexModal: 4;
 
 //sizes
 $headerHeight: 80px;
 $headerHeightMobile: 60px;
 
 $footerHeight: 40px;
+$footerHeightMobile: 30px;
 
 //font weight
 $fwThin: 400;

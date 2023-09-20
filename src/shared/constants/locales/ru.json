@@ -6,6 +6,32 @@
     "footer": {
         "copyright": "Все права защищены авторским правом ©"
     },
+    "projects": {
+        "nameWC": "Web-chat with real-time translation",
+        "descWC": "A real-time translation app, which is targeted on intercultural and interlingual communication.",
+        "extendedDescWC": "INApp is a real-time translation app for for intercultural and interlingual communication. You can choose a translation language from those offered. And from that time, all the messages in the text chat will be translated to it. Moreover, you can call any user of the application (establish a real-time video and audio connection) - after that you will be able to hear and see your interlocutor and also read the subtitles of his speech on language you chose. As for development - this is fullstack application with frontend on React, which interacts with the server-side via HTTP and WS protocols, and also recognizes speech using the Google speech-recognition API. Backend was written on NodeJs + express with high-level microservices architecture. There are 3 services: gateway service - responsible for registration and forwarding requests to other services, translation service - responsible for translate all the texts using Yandex translate API, and chats service - based on websocket protocol, it's implement a message exchange with frontend. Frontend was deployed on Azure using VM + nginx. Backend was deployed on Azure using Kubernetes cluster + terraform.",
+        "stackWC": "Fullstack application based on React and NodeJs",
+
+        "nameCompiler": "Web-compiler",
+        "descCompiler": "An application that allows you to compile code in various programming languages and see the execution result.",
+        "extendedDescCompiler": "NW Compiler allows you to compile code in Python, C++ and JavaScript. Frontend was built using React and MUI. Additionally, localization and theming have been added to improve user experience. Backend was written on NodeJs + Express using monolith structure whose purpose is to compile the received code using an HTTP Post request. To do this, a file is created for each received code with an extension corresponding to its language. And with the help of a child process (the exec module built into nodejs), compilation occurs on the machine from which the server is running. For this, pre-installed g++, node and python packages are used.",
+        "stackCompiler": "Fullstack application based on React and NodeJs",
+
+        "nameBC": "Dummy AI Chat",
+        "descBC": "This application imitates interface and responses like in ChatGPT.",
+        "extendedDescBC": "An application that provides the user with a fancy interface and the ability to send various questions and receive an answer from the server. It was written on React using frontend modular architecture and bundled via Vite. The main feature of this app is the use of a new feature added to the fetch API - stream processing. Data from the server arrives in chunk format. To process it, a stream is opened to read the data. Each chunk is decoded in a loop and gradually forms a response to the user, creating the effect of a chat-bot.",
+        "stackBC": "React application",
+
+        "namePolicy": "Insurance app",
+        "descPolicy": "This is an application that has a comfortable insurance process, fancy UI and a lot of client functionality.",
+        "extendedDescPolicy": "Policy allows you to purchase insurance online for different types of property. This application was made to order and written on React, using Ant Design as a UI library and modular frontend modular architecture for better scalability in advance. By agreement, only part of the functionality was implemented - the main adaptive page with localization and the business process of obtaining car insurance. All the interface was made based on figma layouts made by the designer. At this point the source code of the application has been transferred to the development team for further development",
+        "stackPolicy": "React application",
+
+        "namePortfolio": "This portfolio app",
+        "descPortfolio": "In this application I wanted to tell you a little about myself and my projects. I hope it worked out :)",
+        "extendedDescPortfolio": "The portfolio application is designed as a CV in web format for additional convenience. It contains information my personal information, work experience and skills. It was written on 13v of NextJs using frontend modular architecture. Additionally, I decided to add information about my latest and greatest projects to my portfolio app. Unfortunately, most of the projects are fall under NDA, so I can't share them here. But many other projects that I didn't mention here are stored in my GitHub at the link below. Among them are many designed landing pages, simple web applications for practicing skills and web applications written in various frameworks. There are also some console applications in various programming languages.",
+        "stackPortfolio": "Next application"
+    },
     "home": {
         "name": "Никита Аверочкин",
         "contacts": "Контакты",
@@ -41,7 +67,7 @@
 
         "tecom": "Tecom",
         "locationTecom": "Nizhny Novgorod, Russia (Удаленно)",
-        "yearsTecom": "February 2022 — November 2022",
+        "yearsTecom": "Февраль 2022 — Ноябрь 2022",
         "descriptionTecom": "Занимался различными проектами: Библиотекой UI компонентов. Библиотекой готовых утилит со своим store, с различными экшенами и селекторами. Разрабатывал 3 различных встраиваемых виджета - диаграммы, pdf отчеты, графики (написан с нуля). Также, я учавствовал в разработке основного приложения удаленного мониторинга устройств. Занимался поддержкой существующего функционала - исправлял баги и рефакторил код, а также писал новый код и бизнес-логику. К каждому проекту разрабатывал различные функциональные React компоненты. Для UI библиотеки это были переписанные компоненты из material-UI, для виджетов - свои изолированные модули. Покрывал проекты unit тестами, используя jest, а также e2e тестами, используя playwright.",
 
         "julius": "Julius",

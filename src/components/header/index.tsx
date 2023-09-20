@@ -2,11 +2,11 @@
 
 import { useTranslations } from "next-intl";
 import { EN, RU } from "@/shared/constants/locales";
+import { HOME_ROUTE, PROJECTS_ROUTE } from "./routes";
 import Link from "next-intl/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import Line from "@/shared/ui/line";
-import lineAligns from "@/shared/ui/line/lineAligns";
+import Line, { lineAligns } from "@/shared/ui/line";
 import LanguagePicker from "./languagePicker";
 import cx from "classnames";
 
@@ -16,7 +16,8 @@ const Header = () => {
     const t = useTranslations("header");
     const pathname = usePathname();
 
-    const isRuLocation = pathname.includes(RU);
+    const locationCountry = pathname.includes(RU) ? RU : EN;
+    const isHomePage = !pathname.includes("projects");
 
     const [withLine, setWithLine] = useState(true);
 
@@ -40,24 +41,24 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <nav className={cx(styles.nav, withLine && styles.linedNav)}>
+            <nav className={cx(styles.nav, withLine && isHomePage && styles.linedNav)}>
                 <ul className={styles.ul}>
                     <li>
-                        <Link className={styles.link} href={"/"} locale={isRuLocation ? RU : EN}>
+                        <Link className={styles.link} href={HOME_ROUTE} locale={locationCountry}>
                             {t("home")}
                         </Link>
                     </li>
                     <li>
                         <Link
                             className={styles.link}
-                            href={"/projects"}
-                            locale={isRuLocation ? RU : EN}
+                            href={PROJECTS_ROUTE}
+                            locale={locationCountry}
                         >
                             {t("projects")}
                         </Link>
                     </li>
                     <Line className={styles.line} align={lineAligns.vertical} thickness={"2px"} />
-                    <LanguagePicker isRuLocation={isRuLocation} />
+                    <LanguagePicker pathname={pathname} locationCountry={locationCountry} />
                 </ul>
             </nav>
         </header>

@@ -1,9 +1,13 @@
+"use client";
+
 import { FC } from "react";
 import { ICompany } from "../defaultData";
-import Title from "@/shared/ui/title";
-import titleTypes from "@/shared/ui/title/titleTypes";
+import Title, { titleTypes } from "@/shared/ui/title";
 import getStrWithClassBeforeSeparator from "@/shared/lib/utils/getStrWithClassBeforeSeparator";
 import cx from "classnames";
+
+import { motion } from "framer-motion";
+import { smoothAppearing } from "@/shared/constants/animationProps";
 
 import styles from "./styles.module.scss";
 
@@ -23,7 +27,7 @@ const Company: FC<ICompany> = ({
     );
 
     return (
-        <div>
+        <motion.div {...smoothAppearing}>
             <Title
                 className={cx(styles.text, styles.title)}
                 text={jobTitle}
@@ -36,7 +40,7 @@ const Company: FC<ICompany> = ({
             <p className={cx(styles.lightText, styles.description)}>{companyDescription}</p>
             <p className={cx(styles.text, styles.skills)}>{skillsParsed}</p>
             <p className={styles.text}>{workingProcessParsed}</p>
-        </div>
+        </motion.div>
     );
 };
 
