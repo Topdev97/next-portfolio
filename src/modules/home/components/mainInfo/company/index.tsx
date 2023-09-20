@@ -1,9 +1,9 @@
 "use client";
 
 import { FC } from "react";
+import { useTranslations } from "next-intl";
 import { ICompany } from "../defaultData";
 import Title, { titleTypes } from "@/shared/ui/title";
-import getStrWithClassBeforeSeparator from "@/shared/lib/utils/getStrWithClassBeforeSeparator";
 import cx from "classnames";
 
 import { motion } from "framer-motion";
@@ -20,11 +20,7 @@ const Company: FC<ICompany> = ({
     skills,
     workingProcess
 }) => {
-    const skillsParsed = getStrWithClassBeforeSeparator(skills, styles.externalTitle);
-    const workingProcessParsed = getStrWithClassBeforeSeparator(
-        workingProcess,
-        styles.externalTitle
-    );
+    const t = useTranslations("home");
 
     return (
         <motion.div {...smoothAppearing}>
@@ -38,8 +34,14 @@ const Company: FC<ICompany> = ({
                 <span>{companyLocation}</span>|<span>{companyYears}</span>
             </div>
             <p className={cx(styles.lightText, styles.description)}>{companyDescription}</p>
-            <p className={cx(styles.text, styles.skills)}>{skillsParsed}</p>
-            <p className={styles.text}>{workingProcessParsed}</p>
+            <div className={cx(styles.text, styles.skills)}>
+                <span className={styles.externalTitle}>{t("skills")}</span>
+                <span>: {skills}</span>
+            </div>
+            <div className={styles.text}>
+                <span className={styles.externalTitle}>{t("workingProcess")}</span>
+                <span>: {workingProcess}</span>
+            </div>
         </motion.div>
     );
 };

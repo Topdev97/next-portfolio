@@ -7,6 +7,7 @@ import cx from "classnames";
 
 import gitImg from "@/shared/assets/svg/git.svg";
 import styles from "./styles.module.scss";
+import { useTranslations } from "next-intl";
 
 interface IModal {
     imgSrc: StaticImageData;
@@ -18,6 +19,7 @@ interface IModal {
     ref?: RefObject<HTMLDivElement>;
 }
 const Modal: FC<IModal> = ({ imgSrc, link, name, desc, stack, setIsVisible, ref }) => {
+    const t = useTranslations("projects");
     const closeModal = () => {
         setIsVisible(false);
     };
@@ -33,11 +35,11 @@ const Modal: FC<IModal> = ({ imgSrc, link, name, desc, stack, setIsVisible, ref 
                 />
                 <p className={cx(styles.text, styles.desc)}>{desc}</p>
                 <div className={cx(styles.text, styles.stack)}>
-                    <p className={cx(styles.bold)}>Project stack:</p>
+                    <p className={cx(styles.bold)}>{t("projectStack")}:</p>
                     <p>{stack}</p>
                 </div>
                 <a className={cx(styles.text, styles.projectLink)} target={"_blank"} href={link}>
-                    <span className={styles.bold}>Source code</span>
+                    <span className={styles.bold}>{t("sourceCode")}</span>
                     <Image className={styles.gitImg} src={gitImg} alt={"git image"} />
                 </a>
             </div>

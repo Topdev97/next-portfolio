@@ -15,9 +15,8 @@ const getCompaniesData = (t: any): ICompany[] => {
             companyLocation: t("locationIt1"),
             companyYears: t("yearsIt1"),
             companyDescription: t("descriptionIt1"),
-            skills:
-                t("skills") + ": " + "HP Service Manager, JavaScript, RAD, SOAP API, SQL, loadash",
-            workingProcess: t("workingProcess") + ": " + "Jira, Cisco Jabber, Onyx"
+            skills: "HP Service Manager, JavaScript, RAD, SOAP API, SQL, loadash",
+            workingProcess: "Jira, Cisco Jabber, Onyx"
         },
         {
             jobTitle: t("jobTitleShared"),
@@ -25,11 +24,8 @@ const getCompaniesData = (t: any): ICompany[] => {
             companyLocation: t("locationCalendaria"),
             companyYears: t("yearsCalendaria"),
             companyDescription: t("descriptionCalendaria"),
-            skills:
-                t("skills") +
-                ": " +
-                "React, React-hooks, Redux-toolkit, Typescript, Jss, Ant design, Webpack",
-            workingProcess: t("workingProcess") + ": " + "GitLab, Jira, Swagger"
+            skills: "React, React-hooks, Redux-toolkit, Typescript, Jss, Ant design, Webpack",
+            workingProcess: "GitLab, Jira, Swagger"
         },
         {
             jobTitle: t("jobTitleShared"),
@@ -37,11 +33,8 @@ const getCompaniesData = (t: any): ICompany[] => {
             companyLocation: t("locationTecom"),
             companyYears: t("yearsTecom"),
             companyDescription: t("descriptionTecom"),
-            skills:
-                t("skills") +
-                ": " +
-                "React, React-hooks, Jss, material-UI, Intl, Redux, Reselect, Jest, playwright, lerna",
-            workingProcess: t("workingProcess") + ": " + "GitLab, Jira, Microsoft teams"
+            skills: "React, React-hooks, Jss, material-UI, Intl, Redux, Reselect, Jest, playwright, lerna",
+            workingProcess: "GitLab, Jira, Microsoft teams"
         },
         {
             jobTitle: t("jobTitleShared"),
@@ -49,11 +42,8 @@ const getCompaniesData = (t: any): ICompany[] => {
             companyLocation: t("locationJulius"),
             companyYears: t("yearsJulius"),
             companyDescription: t("descriptionJulius"),
-            skills:
-                t("skills") +
-                ": " +
-                "React, React-hooks, React Relay, graphql, Typescript, Sass, Ant design",
-            workingProcess: t("workingProcess") + ": " + "GitLab, Linear, Youtrack"
+            skills: "React, React-hooks, React Relay, graphql, Typescript, Sass, Ant design",
+            workingProcess: "GitLab, Linear, Youtrack"
         }
     ];
 };

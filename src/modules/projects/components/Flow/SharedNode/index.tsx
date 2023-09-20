@@ -1,3 +1,5 @@
+"use client";
+
 import { FC, lazy, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
@@ -11,6 +13,7 @@ import { AnimatePresence } from "framer-motion";
 
 import gitImg from "@/shared/assets/svg/git.svg";
 import styles from "./styles.module.scss";
+import { useTranslations } from "next-intl";
 
 const Modal = lazy(() => import("./modal"));
 
@@ -24,6 +27,7 @@ const SharedNode: FC<TSharedNode> = ({
     link,
     stack
 }) => {
+    const t = useTranslations("projects");
     const [modalVisible, setModalVisible] = useState(false);
     const openModal = () => setModalVisible(true);
 
@@ -41,7 +45,7 @@ const SharedNode: FC<TSharedNode> = ({
             <Line thickness={"2px"} />
             <div className={styles.btnsSection}>
                 <Button onClick={openModal} variant={buttonVariants.DARK}>
-                    Learn more
+                    {t("learnMore")}
                 </Button>
                 <a target="_blank" href={link}>
                     <Image className={styles.gitImg} src={gitImg} alt={"git img"} />

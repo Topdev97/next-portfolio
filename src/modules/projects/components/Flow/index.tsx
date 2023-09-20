@@ -5,8 +5,10 @@ import { useNodesState, Controls, NodeTypes, MiniMap } from "reactflow";
 import ReactFlow, { Node } from "reactflow";
 import SharedNode from "./SharedNode";
 import { useTranslations } from "next-intl";
-
 import { getNodesData } from "./defaultData";
+
+import { motion } from "framer-motion";
+import { smoothAppearing } from "@/shared/constants/animationProps";
 
 import "reactflow/dist/style.css";
 import styles from "./styles.module.scss";
@@ -39,18 +41,18 @@ const Flow = () => {
     const [nodes, _, onNodesChange] = useNodesState<Node[]>(customNodes);
 
     return (
-        <div className={styles.flowWrapper}>
+        <motion.div {...smoothAppearing} className={styles.flowWrapper}>
             <ReactFlow
                 nodes={nodes}
                 nodeTypes={nodeTypes}
                 edges={[]}
                 onNodesChange={onNodesChange}
-                fitView
+                fitView={true}
             >
                 <MiniMap nodeColor={cssVars.gray} nodeStrokeWidth={3} zoomable pannable />
                 <Controls />
             </ReactFlow>
-        </div>
+        </motion.div>
     );
 };
 
